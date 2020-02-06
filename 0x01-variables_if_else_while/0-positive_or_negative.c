@@ -4,8 +4,9 @@
 /* more headers goes there */
 /**
  * main
- * This will print a random number and see if its greater than 0 or less than 0 or equal to 0
- *
+ *Description: This program will take a random number and display whether it is
+ *positive, negative, or zero.
+ *Return: Returns 0 upon successful run.
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -15,10 +16,11 @@ int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
 if (n > 0)
-printf("%d is positive\n", n);
+printf("%d is positive", n);
 else if (n < 0)
-printf("%d is negative\n", n);
+printf("%d is negative", n);
 else
-printf("%d is zero\n", n);
+printf("%d is zero", n);
+putchar('\n');
 return (0);
 }
