@@ -3,7 +3,8 @@
 #include <time.h>
 /* more headers goes there */
 /**
- * main - Entry point
+ * main
+ * This will print a random number and see if its greater than 0 or less than 0 or equal to 0
  *
  * Return: Always 0 (Success)
  */
