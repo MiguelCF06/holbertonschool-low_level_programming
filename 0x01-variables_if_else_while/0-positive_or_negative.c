@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
 /**
- * main
+ * main - Entry point
  *Description: This program will take a random number and display whether it is
  *positive, negative, or zero.
  *Return: Returns 0 upon successful run.
- * Return: Always 0 (Success)
  */
 int main(void)
 {
