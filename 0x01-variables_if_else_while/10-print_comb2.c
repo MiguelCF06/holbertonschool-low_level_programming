@@ -6,14 +6,24 @@
  */
 int main(void)
 {
-int i = 0;
-for (i = 0; i < 100 ; i++)
+int x, y;
+x = '0';
+y = '0';
+while (x <= '9')
 {
-putchar ((i / 10) + '0');
-putchar ((i % 10) + '0');
-if (i <= 98)
+while (y <= '9')
+{
+putchar(x);
+putchar(y);
+if (x != '9' ||  y != '9')
+{
 putchar(',');
 putchar(' ');
+}
+y++;
+}
+y = '0';
+x++;
 }
 putchar('\n');
 return (0);
