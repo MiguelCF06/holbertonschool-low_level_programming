@@ -1,13 +1,12 @@
 #include "holberton.h"
-/* *main - Entry point
+/**
+ * main - check the code for Holberton School students.
  *
- *Description: This program will take a random number and display whether it is
- *positive, negative, or zero.
- *Return: Returns 0 upon successful run.
+ * Return: Always 0.
  */
 int main(void)
 {
-  {
+{
 _putchar('H');
 _putchar('o');
 _putchar('l');
@@ -17,7 +16,7 @@ _putchar('r');
 _putchar('t');
 _putchar('o');
 _putchar('n');
-  }
+}
 _putchar('\n');
 return (0);
 }
