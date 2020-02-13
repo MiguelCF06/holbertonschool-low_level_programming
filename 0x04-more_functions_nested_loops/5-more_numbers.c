@@ -11,7 +11,7 @@ void more_numbers(void)
 	int tiempo = 0;
 	int cont = 14;
 
-	while (tiempo < 11)
+	while (tiempo < 10)
 	{
 		a = 0, c = '1', b = '0', cont = 14, cont2 = '0';
 		for (a = 0; a <= cont; a++)
