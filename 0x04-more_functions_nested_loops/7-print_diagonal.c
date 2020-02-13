@@ -7,7 +7,7 @@
 void print_diagonal(int n)
 {
 	int a = 0;
-	int spaces; 
+	int spaces;
 
 	while (a < n)
 	{
