@@ -22,7 +22,7 @@ void print_rev(char *s)
 {
 	int rev;
 
-	for (rev = _strlen(s); rev >= 0; rev--)
+	for (rev = _strlen(s); rev > 0; rev--)
 	{
 		_putchar(s[rev - 1]);
 	}
