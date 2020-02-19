@@ -7,12 +7,12 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	int copy;
+	int count;
 
-	for (copy = 0; src[copy] != '\0'; copy++)
+	for (count = 0; src[count] != '\0'; count++)
 	{
-		dest[copy] = src[copy];
+		dest[count] = src[count];
 	}
-	dest[copy] = src[copy];
+	dest[count] = src[count];
 	return (dest);
 }
