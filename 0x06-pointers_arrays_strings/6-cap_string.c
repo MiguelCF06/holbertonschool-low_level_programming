@@ -12,6 +12,8 @@ char *cap_string(char *s)
 	{
 		if (s[count] == ' ' || s[count] == '\t' || s[count] == '.')
 		{
+			if(s[count] == '\t')
+				s[count] = ' ';
 			if (s[count] == '.' && s[count + 1] == '\n')
 			count += 2;
 			else
