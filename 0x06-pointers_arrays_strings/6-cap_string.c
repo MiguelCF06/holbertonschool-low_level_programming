@@ -12,17 +12,21 @@ char *cap_string(char *s)
 	{
 		if (s[count] == ' ' || s[count] == '\t' || s[count] == '.')
 		{
-			if(s[count] == '\t')
-				s[count] = ' ';
-			if (s[count] == '.' && s[count + 1] == '\n')
-			count += 2;
-			else
-				count += 1;
-			if (s[count] >= 'a' && s[count] <= 'z')
+			if (s[count] == '\n' && s[count + 1] == '\0')
 			{
-				s[count] = s[count] - 32;
+			}
+			else
+			{
+				if (s[count] == '.' && s[count + 1] == '\n')
+					count += 2;
+				else
+					count += 1;
+				if (s[count] >= 'a' && s[count] <= 'z')
+				{
+					s[count] = s[count] - 32;
+				}
 			}
 		}
 	}
-		return (s);
+	return (s);
 }
