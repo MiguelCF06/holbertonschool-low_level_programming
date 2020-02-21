@@ -10,21 +10,24 @@ char *cap_string(char *s)
 
 	for (count = 0; s[count] != '\0' ; count++)
 	{
-		if (s[count] == ' ' || s[count] == '\t' || s[count] == '.')
+		if (s[count - 1] == 0 ||
+		    s[count - 1] == 9 ||
+		    s[count - 1] == 10 ||
+		    s[count - 1] == 32 ||
+		    s[count - 1] == '.' ||
+		    s[count - 1] == ',' ||
+		    s[count - 1] == ';' ||
+		    s[count - 1] == '!' ||
+		    s[count - 1] == '?' ||
+		    s[count - 1] == '"' ||
+		    s[count - 1] == '(' ||
+		    s[count - 1] == ')' ||
+		    s[count - 1] == '{' ||
+		    s[count - 1] == '}')
 		{
-			if (s[count] == '\n' && s[count + 1] == '\0')
+			if (s[count] >= 'a' && s[count] <= 'z')
 			{
-			}
-			else
-			{
-				if (s[count] == '.' && s[count + 1] == '\n')
-					count += 2;
-				else
-					count += 1;
-				if (s[count] >= 'a' && s[count] <= 'z')
-				{
-					s[count] = s[count] - 32;
-				}
+				s[count] = s[count] - 32;
 			}
 		}
 	}
