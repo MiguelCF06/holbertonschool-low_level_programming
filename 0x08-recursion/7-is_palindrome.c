@@ -1,40 +1,48 @@
 #include "holberton.h"
-/**
- * _strlen_recursion - Return the length of the string
- * @s: String
- * Return: Strlen
+/*
+ * sizestr - know length of the string
+ * Return: sizestr
+ * @s: given pointer that has a String
+ *
  */
-int _strlen(char *s)
+int sizestr(char *s)
 {
-	if (!*s)
-		return (0);
-	else
-		return (1 + _strlen(s + 1));
+	if (*s != '\0')
+		return (1 + sizestr(s + 1));
+	return (0);
 }
 /**
- * palindrome_helper - Return the length of the string
- * @s: String
- * @len: size
- * @i: iterator
- * Return: Strlen
+ * knowpal - know if its palindrome
+ * Return: 1 if its palindrome if not 0
+ * @s: Given string that has a string
+ * @size: Size of the string
  */
-int palindrome_helper(char *s, int len, int i)
+int knowpal(char *s, int size)
 {
-	if (_strlen(s) == 0)
-		return (0);
-	if (*(s + i) != *(s + len - 1))
-		return (0);
-	else if (i > (len - 1))
+	if (*s != '\0')
+	{
+		if (*s == s[size])
+		{
+			return (1 * (knowpal(s + 1, size - 2)));
+		}
+		else
+		{
+			return (0);
+		}
+	}
+	if (size <= 0)
 		return (1);
-	else
-		return (palindrome_helper(s, len - 1, i + 1));
+	return (1);
 }
 /**
- * is_palindrome - Return the length of the string
- * @s: String
- * Return: Strlen
+ * is_palindrome - The string is palindrome
+ * Return: calls the function knowpal
+ * @s: Given pointer with a string
+ *
  */
 int is_palindrome(char *s)
 {
-	return (palindrome_helper(s, _strlen(s), 0));
+	int x = sizestr(s) - 1;
+
+	return (knowpal(s, x));
 }
