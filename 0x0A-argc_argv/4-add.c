@@ -9,24 +9,27 @@
  */
 int main(int argc, char *argv[])
 {
-	int count;
+	int x;
+	int y;
 	int sum = 0;
 
 	if (argc == 1)
 	{
 		printf("0\n");
-		return(0);
+		return (0);
 	}
 	else
-		for (count = 1; count < argc; count++)
+		for (x = 1; x < argc; x++)
 		{
-			if (!isdigit(*argv[count]))
+			for (y = 0; argv[x][y]; y++)
 			{
-				printf("Error\n");
-				return (1);
+				if (!isdigit(argv[x][y]))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
-			else
-				sum += atoi(argv[count]);
+			sum += atoi(argv[x]);
 		}
 	printf("%i\n", sum);
 	return (0);
