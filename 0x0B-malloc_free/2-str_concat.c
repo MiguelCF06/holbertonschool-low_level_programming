@@ -22,21 +22,22 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
+	
 
-	conar = malloc(sizeof(s1) + sizeof(s2 - 1));
-
+	conar = malloc(sizeof(s1) + sizeof(s2));
+	
 	if (conar == NULL)
 	{
 		return (NULL);
 	}
-		for (con1 = 0; s1[con1] != '\0'; con1++)
-		{
-			conar[con1] = s1[con1];
-		}
-
-		for (con2 = 0; s2[con2] != '\0'; con1++, con2++)
-		{
-			conar[con1] = s2[con2];
-		}
-		return (conar);
+	for (con1 = 0; s1[con1] != '\0'; con1++)
+	{
+		conar[con1] = s1[con1];
+	}
+	for (con2 = 0; s2[con2] != '\0'; con1++, con2++)
+	{
+		conar[con1] = s2[con2];
+	}
+	conar = '\0';
+	return (conar);
 }
