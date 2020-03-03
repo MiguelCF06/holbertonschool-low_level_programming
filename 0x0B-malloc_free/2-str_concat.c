@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 		*s2 = '\0';
 	}
 
-	conar = malloc(sizeof(s1) + sizeof(s2 + 1));
+	conar = malloc(sizeof(s1) + sizeof(s2 - 1));
 
 	if (conar == NULL)
 	{
