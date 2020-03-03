@@ -34,9 +34,9 @@ char *str_concat(char *s1, char *s2)
 	{
 		conar[con1] = s2[con2];
 	}
-	conar[con1] = '\0';
 	return (conar);
 	}
 	else
 		return (NULL);
+	return (conar);
 }
