@@ -25,10 +25,12 @@ char *str_concat(char *s1, char *s2)
 		*s2 = '\0';
 	}
 
-	conar = malloc(sizeof(s1) + sizeof(s2));
+	conar = malloc(sizeof(s1) + sizeof(s2 + 1));
 
-	if (conar != NULL)
+	if (conar == NULL)
 	{
+		return (NULL);
+	}
 		for (con1 = 0; s1[con1] != '\0'; con1++)
 		{
 			conar[con1] = s1[con1];
@@ -38,11 +40,5 @@ char *str_concat(char *s1, char *s2)
 		{
 			conar[con1] = s2[con2];
 		}
-
 		return (conar);
-	}
-	else
-		return (NULL);
-	return (conar);
-	free(conar);
 }
