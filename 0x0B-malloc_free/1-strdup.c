@@ -22,6 +22,8 @@ char *_strdup(char *str)
 	}
 	count = 0;
 	dup = malloc(sizeof(char) * (length + 1));
+	if (dup == NULL)
+		return (NULL);
 	while (count < (length + 1))
 	{
 		dup[count] = str[count];
