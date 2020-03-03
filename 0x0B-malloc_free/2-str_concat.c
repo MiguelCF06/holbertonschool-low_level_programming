@@ -22,10 +22,9 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	
 
 	conar = malloc(sizeof(s1) + sizeof(s2));
-	
+
 	if (conar == NULL)
 	{
 		return (NULL);
