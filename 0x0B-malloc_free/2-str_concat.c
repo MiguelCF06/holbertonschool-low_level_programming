@@ -24,8 +24,8 @@ char *str_concat(char *s1, char *s2)
 		s1 = malloc(sizeof(char));
 		*s1 = '\0';
 	}
-	if (conar == NULL)
-		return (NULL);
+	if (conar != NULL)
+	{
 	for (con1 = 0; s1[con1] != '\0'; con1++)
 	{
 		conar[con1] = s1[con1];
@@ -35,4 +35,7 @@ char *str_concat(char *s1, char *s2)
 		conar[con1] = s2[con2];
 	}
 	return (conar);
+	}
+	else
+		return (NULL);
 }
