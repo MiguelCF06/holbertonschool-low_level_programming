@@ -38,6 +38,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		conar[con1] = s2[con2];
 	}
-	conar = '\0';
+	conar[con1] = '\0';
 	return (conar);
 }
