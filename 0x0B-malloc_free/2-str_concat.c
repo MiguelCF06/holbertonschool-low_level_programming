@@ -13,7 +13,6 @@ char *str_concat(char *s1, char *s2)
 	int con2;
 	char *conar;
 
-	conar = malloc(sizeof(s1) + sizeof(s2));
 	if (s2 == NULL)
 	{
 		s2 = malloc(sizeof(char));
@@ -24,6 +23,7 @@ char *str_concat(char *s1, char *s2)
 		s1 = malloc(sizeof(char));
 		*s1 = '\0';
 	}
+	conar = malloc(sizeof(s1) + sizeof(s2));
 	if (conar != NULL)
 	{
 	for (con1 = 0; s1[con1] != '\0'; con1++)
