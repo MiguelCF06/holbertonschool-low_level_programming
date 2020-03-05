@@ -9,19 +9,19 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *allocmem;
-	unsigned int x;
+	unsigned int x, y;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-
-	allocmem = malloc(nmemb * size);
+	y = nmemb * size;
+	allocmem = malloc(y);
 	if (allocmem == NULL)
 	{
 		return (NULL);
 	}
-	for (x = 0; x < nmemb; x++)
+	for (x = 0; x < y; x++)
 	{
-		allocmem[x] = 0;
+		allocmem[x] = '\0';
 	}
 	return (allocmem);
 }
