@@ -23,16 +23,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	while (s1[con1] != '\0')
 		con1++;
-	if (con2 < n)
-	{
-		while (s2[con2])
-		con2++;
-	}
+
 	while (s2[con2] != '\0')
 	{
 		con2++;
 	}
-	conar = malloc(sizeof(char) * (con1) + (con2 + 1));
+	if (n > con2)
+		n = con2;
+
+	conar = malloc(sizeof(char) * (con1 + n + 1));
 	if (conar == NULL)
 	{
 		return (NULL);
@@ -44,6 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (con2 = 0; con2 < n; con1++, con2++)
 	{
 		conar[con1] = s2[con2];
+
 	}
 	conar[con1] = '\0';
 	return (conar);
