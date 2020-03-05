@@ -8,12 +8,12 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *allocmem = NULL;
+	unsigned int *allocmem;
 	unsigned int x;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	allocmem = malloc(sizeof(char) * nmemb);
+	allocmem = malloc(sizeof(unsigned int) * nmemb);
 	if (allocmem == NULL)
 	{
 		return (NULL);
