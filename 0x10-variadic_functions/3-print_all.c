@@ -64,7 +64,6 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 	va_start(ptall, format);
-
 	while (format != NULL && format[i] != '\0')
 	{
 		x = 0;
@@ -83,4 +82,3 @@ void print_all(const char * const format, ...)
 	printf("\n");
 	va_end(ptall);
 }
-
