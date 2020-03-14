@@ -24,7 +24,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("%i", p);
 		if (x < n - 1)
 		{
-			`printf("%s", separator);
+			printf("%s", separator);
 		}
 	}
 	printf("\n");
