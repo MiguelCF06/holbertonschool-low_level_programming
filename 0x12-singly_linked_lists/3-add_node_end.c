@@ -21,24 +21,26 @@ int _slength(const char *s)
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node;
-	char *str1 = strdup(str);
-	list_t *lastpos = *head;
+	list_t *lastpos;
 
 	new_node = malloc(sizeof(list_t));
-
-	new_node->str = str1;
-	new_node->len = _slength(str1);
+	if (new_node == NULL)
+		return (NULL);
+	new_node->str = strdup(str);
+	new_node->len = _slength(str);
 	new_node->next = NULL;
 
+	lastpos = *head;
 	if (*head == NULL)
 	{
 		*head = new_node;
-		return (NULL);
 	}
-
-	while (lastpos->next != NULL)
-		lastpos = lastpos->next;
-	lastpos->next = new_node;
-	return (lastpos);
+	else
+	{
+		while (lastpos->next != NULL)
+			lastpos = lastpos->next;
+		lastpos->next = new_node;
+	}
+	return (*head);
 
 }
