@@ -10,7 +10,7 @@ void free_listint2(listint_t **head)
 	listint_t *current;
 
 	current = *head;
-	while (temp != NULL && current != NULL)
+	while (current != NULL && head != NULL)
 	{
 		temp = current;
 		current = current->next;
