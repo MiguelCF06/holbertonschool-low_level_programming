@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- *add_node - Add a new node to the linked list (list_t)
+ *add_nodeint - Add a new node to the linked list (list_t)
  *@head: pointer to pointer in the list.
  *@n: The integer
  *Return: The address of the elements
