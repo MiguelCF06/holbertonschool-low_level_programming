@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 	int close_to;
 	char *buffer[1024];
 	mode_t bitPermissions;
-	ssize_t lR;
+	ssize_t lR, lW;
 
 	bitPermissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
@@ -94,7 +94,10 @@ int main(int argc, char *argv[])
 		lR = read(fd_from, buffer, 1024);
 		existence(argv[1], fd_from, fd_to, lR);
 
-		write(fd_to, buffer, lR);
+		lW = write(fd_to, buffer, lR);
+		if (lR != lW)
+			lW = -1;
+		notCreate(argv[2], fd_from, fd_to, lW);
 	}
 	close_from = close(fd_from);
 	close_to = close(fd_to);
