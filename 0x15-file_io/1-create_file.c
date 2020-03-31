@@ -8,7 +8,7 @@ int lenContent(char *ctxt)
 {
 	int i;
 
-	for (i = 0; i < *ctxt; i++)
+	for (i = 0; ctxt[i]; i++)
 	{
 		;
 	}
@@ -37,8 +37,6 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 		write(fd, text_content, lenCtxt);
-
 	close(fd);
-
 	return (1);
 }
