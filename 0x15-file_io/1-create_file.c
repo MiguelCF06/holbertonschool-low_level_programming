@@ -4,7 +4,7 @@
  *@ctxt: is the pointer to the text_content
  *Return: The length of the string
  */
-int lenContent(char *ctxt)
+size_t lenContent(char *ctxt)
 {
 	int i;
 
@@ -23,7 +23,7 @@ int lenContent(char *ctxt)
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	int lenCtxt;
+	size_t lenCtxt;
 	ssize_t lW = 0;
 
 	lenCtxt = lenContent(text_content);
