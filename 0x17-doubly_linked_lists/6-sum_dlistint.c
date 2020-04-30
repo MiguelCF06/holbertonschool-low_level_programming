@@ -13,7 +13,7 @@ int sum_dlistint(dlistint_t *head)
 		return (0);
 
 	nodes = head;
-	while(nodes != NULL)
+	while (nodes != NULL)
 	{
 		sum = sum + nodes->n;
 		nodes = nodes->next;
