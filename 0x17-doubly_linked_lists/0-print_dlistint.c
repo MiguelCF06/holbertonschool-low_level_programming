@@ -10,16 +10,15 @@ size_t print_dlistint(const dlistint_t *h)
 	const dlistint_t *tmp;
 
 	if (h == NULL)
-		printf("No data found");
-	else
+		return (-1);
+
+	tmp = h;
+	while (tmp != NULL)
 	{
-		tmp = h;
-		while (tmp != NULL)
-		{
-			printf("%d\n", tmp->n);
-			tmp = tmp->next;
-			x++;
-		}
+		printf("%d\n", tmp->n);
+		tmp = tmp->next;
+		x++;
 	}
+
 	return (x);
 }
