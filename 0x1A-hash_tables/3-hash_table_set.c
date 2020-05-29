@@ -40,11 +40,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 }
 
 /**
- *node_handler - Look if the index is a linked list, and traverse it
- *to look if there is not already an item with the key passed. If there
- * is an item add a node.
+ *node_handler - Handle nodes and creates it.
  *@key: The key of the hash table
  *@value: The value of the key.
+ *Return: The new node
  */
 hash_node_t *node_handler(const char *key, const char *value)
 {
