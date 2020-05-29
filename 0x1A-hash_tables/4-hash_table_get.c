@@ -8,13 +8,14 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	char *key_copy;
-	unsigned int i;
+	unsigned long int i;
 	hash_node_t *tmp;
 
-	if (ht == NULL)
+	if (ht == NULL || ht->size == 0 || ht->array == NULL ||
+	    strlen(key) == 0)
 		return (NULL);
 	key_copy = strdup(key);
-	i = key_index(key, ht->size);
+	i = key_index((const unsigned char *)key, ht->size);
 	tmp = ht->array[i];
 
 	while (tmp != NULL)
