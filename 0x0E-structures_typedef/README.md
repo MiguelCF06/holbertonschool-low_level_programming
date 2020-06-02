@@ -8,10 +8,6 @@ What you should learn from this project:
 
 ---
 
-### [0. Django](./dog.h)
-* 
-
-
 ### [1. A dog is the only thing on earth that loves you more than you love yourself](./1-init_dog.c)
 * Write a function that initialize a variable of type struct dog
 
